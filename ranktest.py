@@ -8,7 +8,7 @@ SUBJECTS = ["国語", "英語", "情報"]
 
 # --- ダミーの氏名リスト ---
 DUMMY_NAMES = [
-    "佐藤 太郎", "鈴木 一郎", "高橋 花子", "田中 次郎", "伊藤 さくら", "渡辺 三郎", "山本 美咲", "中村 四郎", "小林 恵子", "加藤 五郎",
+    "山下 斗優太", "鈴木 一郎", "高橋 花子", "田中 次郎", "伊藤 さくら", "渡辺 三郎", "山本 美咲", "中村 四郎", "小林 恵子", "加藤 五郎",
     "吉田 あかり", "山田 六郎", "佐々木 陽菜", "山口 七郎", "松本 凛", "井上 八郎", "木村 結衣", "林 九郎", "斎藤 葵", "清水 十郎"
 ]
 # ダミー名の数が学生数より少ない場合のフォールバック
@@ -19,7 +19,7 @@ if len(DUMMY_NAMES) < NUM_STUDENTS:
 students = []
 for i in range(NUM_STUDENTS):
     student_name = DUMMY_NAMES[i] # リストから名前を取得
-    scores = {subject: random.randint(0, 100) for subject in SUBJECTS} # 各教科0点から100点のランダムな点数
+    scores = {subject: random.randint(60, 100) for subject in SUBJECTS} # 各教科0点から100点のランダムな点数
     student_data = {"名前": student_name}
     student_data.update(scores)
     students.append(student_data)
